@@ -1,4 +1,13 @@
-var click = $('#button').click(function() {
-    fixed = $('.drop_down').css('align-items','flex-start');
-    drop = $('#dropDown').css('height','300px');
+$(document).ready(function() {
+  $(".dictionary").hide();
+
+  $("#button").click(function() {
+    $(".drop_down").css("align-items", "flex-start");
+    $("#dropDown").height("300px");
+    $(".dictionary").show();
+    $("#button").click(function() {
+      $("#dropDown").height ("auto");
+      $(".dictionary").hide();
+    });
   });
+});
